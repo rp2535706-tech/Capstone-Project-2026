@@ -1,0 +1,311 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #081421;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d2032;
+  border-bottom: 1px solid #20384c;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #40d9d0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #bdcbd7;
+}
+
+.nav-links a:hover {
+  color: #40d9d0;
+}
+
+.home {
+  padding: 65px 8%;
+}
+
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.tag {
+  color: #40d9d0;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: #40d9d0;
+}
+
+.hero p {
+  color: #a9bac8;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-btn {
+  background: #20bcb6;
+  color: #061722;
+}
+
+.secondary-btn {
+  border: 1px solid #40d9d0;
+  color: #40d9d0;
+}
+
+.hero-visual {
+  width: 330px;
+  height: 330px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ripple-circle {
+  position: absolute;
+  border: 2px solid #20bcb6;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+.circle-one {
+  width: 120px;
+  height: 120px;
+}
+
+.circle-two {
+  width: 220px;
+  height: 220px;
+  opacity: 0.6;
+}
+
+.circle-three {
+  width: 320px;
+  height: 320px;
+  opacity: 0.3;
+}
+
+.center-icon {
+  color: #40d9d0;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+    opacity: 0.4;
+  }
+}
+
+.features {
+  margin-top: 65px;
+}
+
+.features h2 {
+  margin-bottom: 25px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 30px;
+  background: #10273a;
+  border: 1px solid #23445a;
+  border-radius: 12px;
+  color: #40d9d0;
+}
+
+.feature-card h3 {
+  color: white;
+  margin: 18px 0 10px;
+}
+
+.feature-card p {
+  color: #a9bac8;
+  line-height: 1.6;
+}
+
+.page-container {
+  padding: 55px 8%;
+}
+
+.page-container > p {
+  color: #a9bac8;
+  margin-top: 12px;
+}
+
+.map-placeholder {
+  height: 450px;
+  margin-top: 30px;
+  background: #10273a;
+  border: 1px solid #23445a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #40d9d0;
+  gap: 15px;
+}
+
+.map-placeholder p {
+  color: #a9bac8;
+}
+
+.simulation-card {
+  margin-top: 30px;
+  background: #10273a;
+  border: 1px solid #23445a;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.simulation-visual {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #081421;
+  border-radius: 10px;
+}
+
+.simulation-ripple {
+  border: 3px solid #40d9d0;
+  border-radius: 50%;
+  background: #20bcb633;
+}
+
+.simulation-ripple.active {
+  animation: pulse 1.5s infinite;
+}
+
+.simulation-controls {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.simulation-controls input {
+  width: 100%;
+  accent-color: #40d9d0;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.control-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #20bcb6;
+  color: #061722;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    transform: scale(0.8);
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
